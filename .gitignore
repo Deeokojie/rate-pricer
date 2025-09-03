@@ -4,11 +4,11 @@ __pycache__/
 *.pyo
 *.pyd
 
-# Virtual environment
+# Virtual env
 .venv/
 venv/
 
-# Node
+# Node / React
 node_modules/
 build/
 dist/
@@ -20,7 +20,10 @@ dist/
 # OS
 .DS_Store
 
+# DB & data
+*.db
+*.sqlite3
+
 # Secrets
 .env
-
 

@@ -4,7 +4,8 @@ class PriceResponse(BaseModel):
     notional: float
     rate: float
     years: int
-    present_value : float
+    present_value: float
+    country: str
 
 class PriceRequest(BaseModel):
     notional: float

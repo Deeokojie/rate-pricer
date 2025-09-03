@@ -1,9 +1,0 @@
-# Rate Pricer API 📈
-
-A simple FastAPI-powered interest rate pricing tool.
-Calculates the present value of fixed-income instruments like zero-coupon bonds based on input rate, notional, and maturity.
-
-## Features
-- REST API for pricing
-- Swagger UI documentation
-- Written in FastAPI + Python 3.11

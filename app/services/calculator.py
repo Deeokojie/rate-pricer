@@ -1,11 +1,17 @@
-def calculate_present_value(notational: float, rate: float, years: int) -> float:
+import math
 
+def calculate_present_value(notional: float, rate: float, years: int) -> float:
     """
-    Calculate present value of a zero-coupon bond.
-    Formula: PV = FV / (1 + r)^n
+    PV = FV / (1 + r)^n
     """
+    if any(math.isnan(x) for x in (notional, rate, years)):
+        raise ValueError("Inputs must not be NaN")
 
-    if rate < 0 or years <0:
-        raise ValueError("Rate and years must not be negativeu")
+    if rate <= -1:
+        raise ValueError("Rate must be greater than -1 to avoid division by zero")
 
-    return round(notational / ((1 + rate) ** years), 2)
+    if years < 0:
+        raise ValueError("Years must not be negative")
+
+    pv = notional / ((1 + rate) ** years)
+    return round(pv, 2)
