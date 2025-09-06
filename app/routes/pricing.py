@@ -1,4 +1,3 @@
-# app/routes/pricing.py
 from fastapi import APIRouter, HTTPException, Query
 from app.services.calculator import calculate_present_value
 from app.services.rate_fetcher import get_external_rate
@@ -30,7 +29,7 @@ async def probe(country: str = Query("United Kingdom")):
 @router.get(
     "/external",
     response_model=PriceResponse
-)  # 👈 ensure this closing parenthesis exists
+) 
 async def external(
     notional: float = Query(..., gt=0),
     years: int = Query(..., ge=1, le=50),
