@@ -36,7 +36,6 @@ const CURRENCY_BY_COUNTRY: Record<Country, string> = {
   Türkiye: "TRY"
 };
 
-// 3) API response type
 interface PriceResponse {
   notional: number;
   rate: number;
@@ -44,7 +43,6 @@ interface PriceResponse {
   present_value: number;
   detail?: string;
 }
-
 
 
 const PricingCalculator: React.FC = () => {
@@ -55,7 +53,6 @@ const PricingCalculator: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
 
-  // Formatters (consistent names)
   const numFmt = useMemo(
     () => new Intl.NumberFormat(undefined, { maximumFractionDigits: 2 }),
     []
