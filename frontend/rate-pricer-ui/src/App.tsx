@@ -51,9 +51,9 @@ export default function App() {
   );
 }
 
-/** -------------------
- * ComparePage Component
- * ------------------- */
+/** 
+ ComparePage Component
+ **/
 function ComparePage() {
   type Row = {
     country: string;
@@ -63,7 +63,7 @@ function ComparePage() {
     error?: string;
   };
 
-  // Countries you know work with your backend/API
+
   const ALL = [
       "Australia",
   "China",
