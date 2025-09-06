@@ -1,4 +1,3 @@
-# app/services/rate_fetcher.py
 import os, httpx
 from typing import Optional
 from fastapi import HTTPException
@@ -29,7 +28,7 @@ async def get_external_rate(
             raise HTTPException(status_code=502, detail=f"Upstream {e.response.status_code}: {e.response.text[:500]}")
         data = r.json()
 
-    # --- Parse the shape you just received ---
+    
     rate = None
     if isinstance(data, dict) and "central_bank_rates" in data and data["central_bank_rates"]:
         item = data["central_bank_rates"][0]
